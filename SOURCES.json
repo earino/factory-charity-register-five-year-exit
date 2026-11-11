@@ -1,0 +1,44 @@
+{
+  "publisher-terms.snapshot": {
+    "url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "bytes": 10450,
+    "sha256": "f5b2b9f2af63647cde889fa6c3508f5705925295b74912c68caa28dd37e64aa5",
+    "retrieved_at_unix": 1794393816.420595,
+    "transport_attempts": 1
+  },
+  "publisher-documentation.snapshot": {
+    "url": "https://prd-ds-register-of-charities.charitycommission.gov.uk/documents/17872866/17970272/Data+Definition.docx/f0a342ce-ef45-1401-ee75-26225f6f0d4f",
+    "bytes": 55961,
+    "sha256": "57ba8e26ea4189b8b82a3ace5976f59035008c61d46a90415bf84e88b67345e8",
+    "retrieved_at_unix": 1794393816.7847152,
+    "transport_attempts": 1
+  },
+  "publicextract.charity.zip": {
+    "url": "https://ccewuksprdoneregsadata1.blob.core.windows.net/data/txt/publicextract.charity.zip",
+    "bytes": 44289342,
+    "sha256": "786436a7d10b453098a1b7b60497a8c5b163c805a04adf65b50c636e49a262c6",
+    "retrieved_at_unix": 1794393820.2997422,
+    "transport_attempts": 1
+  },
+  "publicextract.charity_classification.zip": {
+    "url": "https://ccewuksprdoneregsadata1.blob.core.windows.net/data/txt/publicextract.charity_classification.zip",
+    "bytes": 7688301,
+    "sha256": "6fa88202f00719a4b2a70ca1fb6f8b6c7b2ed1d8137cf75157a978503f57f291",
+    "retrieved_at_unix": 1794393821.667753,
+    "transport_attempts": 1
+  },
+  "publicextract.charity_area_of_operation.zip": {
+    "url": "https://ccewuksprdoneregsadata1.blob.core.windows.net/data/txt/publicextract.charity_area_of_operation.zip",
+    "bytes": 4421913,
+    "sha256": "6b2cde7f0a00bd016e47e886b973a9c08af8119fd70aab0459dc99650f294af7",
+    "retrieved_at_unix": 1794393822.8727782,
+    "transport_attempts": 1
+  },
+  "publicextract.charity_governing_document.zip": {
+    "url": "https://ccewuksprdoneregsadata1.blob.core.windows.net/data/txt/publicextract.charity_governing_document.zip",
+    "bytes": 38040267,
+    "sha256": "3efc325a806f344f62573c7e8256366ee36a1b143a12f4947f050457fc774335",
+    "retrieved_at_unix": 1794393832.2619705,
+    "transport_attempts": 1
+  }
+}

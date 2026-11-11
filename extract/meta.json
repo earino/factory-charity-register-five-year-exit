@@ -1,0 +1,47 @@
+{
+  "name": "charity-register-five-year-exit",
+  "description": "Will a charity newly entered on the Register of Charities for England and Wales be removed from the register within five years of its registration date?",
+  "target": "exit_within_5y",
+  "positive_label": 1,
+  "id_columns": [
+    "organisation_number"
+  ],
+  "columns": [
+    "organisation_number",
+    "date_of_registration",
+    "charity_type",
+    "charity_is_cio",
+    "has_company_registration",
+    "classification_what",
+    "classification_who",
+    "area_of_operation_scope",
+    "governing_document_description",
+    "objects_text",
+    "exit_within_5y"
+  ],
+  "rows": {
+    "train": 11279,
+    "eval": 5564,
+    "holdout": 4930
+  },
+  "positive_rate": {
+    "train": 0.06906640659632947,
+    "eval": 0.06560028756290438,
+    "holdout": 0.05334685598377282
+  },
+  "split": {
+    "eval": {
+      "end": "2018-01-01T00:00:00.000",
+      "start": "2017-01-01T00:00:00.000"
+    },
+    "holdout": {
+      "end": "2019-01-01T00:00:00.000",
+      "start": "2018-01-01T00:00:00.000"
+    },
+    "train": {
+      "end": "2017-01-01T00:00:00.000",
+      "start": "2015-01-01T00:00:00.000"
+    }
+  },
+  "split_description": "Chronological by date_of_registration: train = registrations from 2015-01-01 through 2016-12-31; eval = 2017-01-01 through 2017-12-31; holdout = 2018-01-01 through 2018-12-31. No embargo is applied because every input is fixed at the row's own registration date and the label is the row's own forward five-year exit; there are no lagged, rolling or cross-row features. All five-year outcome windows close by 2023-12-31, well before the extract date."
+}

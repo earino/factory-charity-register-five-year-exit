@@ -1,0 +1,361 @@
+{
+  "schema": "factory-1",
+  "dataset": "charity-register-five-year-exit",
+  "version": "v-6e90da65ff14dfeb",
+  "artifact_version": "b059d2169e6f3207400d1b7a9ae3c6c27a32fa765ef5f341f529708c25b01ea2",
+  "assets": {
+    "LICENSE-EVIDENCE.json": {
+      "sha256": "ac450f29eb400846a68fdaef5df66ddce4bda87277367ad2b8cc97e087b28016",
+      "bytes": 787,
+      "asset_name": "LICENSE-EVIDENCE.json"
+    },
+    "LICENSE.md": {
+      "sha256": "62a5a3dbf83bd38a34beb490c9103a8eb7d132b30947c82bb01f04a82bb359f8",
+      "bytes": 915,
+      "asset_name": "LICENSE.md"
+    },
+    "README.md": {
+      "sha256": "c15105e8414c5e01ccfa30254d7d1b2d9cc761bf4fcd6a684c091fcac45d8600",
+      "bytes": 5130,
+      "asset_name": "README.md"
+    },
+    "SOURCES.json": {
+      "sha256": "a25a78efa4498eca4ad4c3cdd965794e27524dfb02eaf41443ddc47ab3cd3360",
+      "bytes": 2062,
+      "asset_name": "SOURCES.json"
+    },
+    "evaluation.json": {
+      "sha256": "eb2f0fcf4684a3ea223f7e302890c1a136595ebf3044935536c56bd8f43b71bd",
+      "bytes": 1415,
+      "asset_name": "evaluation.json"
+    },
+    "extract/meta.json": {
+      "sha256": "898b81c4e8f6bf11a56db8e353ff9392409354dbf9b6142dfcd7dd494ab313fa",
+      "bytes": 1641,
+      "asset_name": "extract__meta.json"
+    },
+    "extract/private/holdout.csv": {
+      "sha256": "bd2ade68d546edaf28e7cb34129f0b0b6c039ed84e6f79ca51ad2e36a0da0e86",
+      "bytes": 3290253,
+      "asset_name": "extract__private__holdout.csv"
+    },
+    "extract/public/eval.csv": {
+      "sha256": "99fa4182453fc21a05314cf7f2e08bd842f38ebf0f92c72b7d3cdcaec062e35b",
+      "bytes": 3698244,
+      "asset_name": "extract__public__eval.csv"
+    },
+    "extract/public/train.csv": {
+      "sha256": "01ae967c85b4305cffda4a08e106df6bf292d5c8c2b02620607c921aeb5255df",
+      "bytes": 7541265,
+      "asset_name": "extract__public__train.csv"
+    },
+    "extract/quality.json": {
+      "sha256": "046cef45ae7a770100994b029ad4d933dee97fcef2f9212ec1a9638b1f618043",
+      "bytes": 17165,
+      "asset_name": "extract__quality.json"
+    },
+    "get_dataset.py": {
+      "sha256": "fad89222d50f9d9709225c34909be74c591df409c08b8b5951eba9d3cadfdd48",
+      "bytes": 3680,
+      "asset_name": "get_dataset.py"
+    },
+    "qualification.json": {
+      "sha256": "229cb6c5028a1635b6c2dc926c5de9521705842870585c30ac629dc1c38a0529",
+      "bytes": 17100,
+      "asset_name": "qualification.json"
+    },
+    "reproduction/LICENSE-CC0-1.0.txt": {
+      "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
+      "bytes": 7048,
+      "asset_name": "reproduction__LICENSE-CC0-1.0.txt"
+    },
+    "reproduction/LICENSE-MIT.txt": {
+      "sha256": "56b932ff064e5da113ae10175c8546325f64f26e1ece71683ffcbf8b2304fe1c",
+      "bytes": 1124,
+      "asset_name": "reproduction__LICENSE-MIT.txt"
+    },
+    "reproduction/artifact_scrub.py": {
+      "sha256": "8c663253e691a7b8751f9c853b40a3752a833360caafb1ea8e8f534e64af4b68",
+      "bytes": 11369,
+      "asset_name": "reproduction__artifact_scrub.py"
+    },
+    "reproduction/build.py": {
+      "sha256": "a1a2cd0dd9b0be19fa0f158e4d45c5124df6cb1c0ebb9ae37fa6e8dd1abe6217",
+      "bytes": 23499,
+      "asset_name": "reproduction__build.py"
+    },
+    "reproduction/construction.json": {
+      "sha256": "0d532c72d385840754fa91d516af949a5c3edeff2812169ca2e799a3a3678083",
+      "bytes": 17702,
+      "asset_name": "reproduction__construction.json"
+    },
+    "reproduction/dataset_package.py": {
+      "sha256": "c2364defe58dcc99322be59a1bb04894ce00e823ce37afeb37bc31012f744327",
+      "bytes": 7927,
+      "asset_name": "reproduction__dataset_package.py"
+    },
+    "reproduction/dataset_run.py": {
+      "sha256": "8085fae14d6e93b852e692e18c1ef72113a3601f48f78901b6d1ae6db278de57",
+      "bytes": 12381,
+      "asset_name": "reproduction__dataset_run.py"
+    },
+    "reproduction/get_dataset.py": {
+      "sha256": "fad89222d50f9d9709225c34909be74c591df409c08b8b5951eba9d3cadfdd48",
+      "bytes": 3680,
+      "asset_name": "reproduction__get_dataset.py"
+    },
+    "reproduction/leakage_battery.py": {
+      "sha256": "adbf7ee0aca0012b78cc1f1e4aeb968a23717cae30f66a02e080215e75f830e3",
+      "bytes": 17379,
+      "asset_name": "reproduction__leakage_battery.py"
+    },
+    "reproduction/provenance.json": {
+      "sha256": "768bebe8c4b2a024625465fb8453c587e61691707251168963ed7f1851a9b476",
+      "bytes": 573,
+      "asset_name": "reproduction__provenance.json"
+    },
+    "reproduction/qualify_dataset.py": {
+      "sha256": "bff6d43d0904182e2612c32bab702e41addbf389904a236c209e78be39e37a6b",
+      "bytes": 66067,
+      "asset_name": "reproduction__qualify_dataset.py"
+    },
+    "reproduction/recovery_recipes.py": {
+      "sha256": "f64c542fcda232169c95ace17421b45275194b934938c0ea4c9b68e6f844ad0e",
+      "bytes": 17609,
+      "asset_name": "reproduction__recovery_recipes.py"
+    },
+    "reproduction/requirements.txt": {
+      "sha256": "5c72f3268174d20364624f76680e189c408a05dba2e7b8cfe12d077b3865e7f0",
+      "bytes": 160,
+      "asset_name": "reproduction__requirements.txt"
+    },
+    "reproduction/source.json": {
+      "sha256": "a47b2d042a5b3d6362b222b2dda406d342fa5edb4d2943ee5124f064e36cc7c8",
+      "bytes": 13722,
+      "asset_name": "reproduction__source.json"
+    },
+    "reproduction/source_io.py": {
+      "sha256": "0c60eed4968cd342148efbaac7e4fa98f00708d8e6c14c0929928687b9af1ea3",
+      "bytes": 5607,
+      "asset_name": "reproduction__source_io.py"
+    },
+    "reproduction/train.py": {
+      "sha256": "a3c6bcf13735bc85c52129ded68f839090dffdc266ebc3810dc61b2e6ea5e7e8",
+      "bytes": 2500,
+      "asset_name": "reproduction__train.py"
+    },
+    "reproduction/validate.py": {
+      "sha256": "b597e7f84fed614e64b4a86fbecbd6ec0145916a24d0d221a796586976418e7b",
+      "bytes": 1277,
+      "asset_name": "reproduction__validate.py"
+    },
+    "reproduction/validate.sh": {
+      "sha256": "3f06ca48f11c2e05d331b4d8394284925de660c1d4b086d2f8243959e83b7e6d",
+      "bytes": 482,
+      "asset_name": "reproduction__validate.sh"
+    },
+    "source-checks.json": {
+      "sha256": "7fad390532f5eb9ffc93f79238f43abba937a2f7ffcc171c0337dca6530db352",
+      "bytes": 9002,
+      "asset_name": "source-checks.json"
+    },
+    "source-snapshot.tar.gz": {
+      "sha256": "884800b133a4569f3da655aa462bcccc506be6177fd119bdfd420c40b722095a",
+      "bytes": 94451885,
+      "asset_name": "source-snapshot.tar.gz"
+    },
+    "verify_dataset.py": {
+      "sha256": "f4a4bb7f565cdbd075c520621f881876b491eaed91a5e6e70afb31e4753f9834",
+      "bytes": 1276,
+      "asset_name": "verify_dataset.py"
+    }
+  },
+  "source": {
+    "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+    "citation": "",
+    "documentation_url": "https://prd-ds-register-of-charities.charitycommission.gov.uk/documents/17872866/17970272/Data+Definition.docx/f0a342ce-ef45-1401-ee75-26225f6f0d4f",
+    "license": "Open Government Licence v3.0 (OGL-UK-3.0)",
+    "publisher": "Charity Commission for England and Wales",
+    "redistribution": true,
+    "terms_excerpt": "The Licensor grants you a worldwide, royalty-free, perpetual, non-exclusive licence to use the Information subject to the conditions below.",
+    "terms_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "urls": [
+      "https://ccewuksprdoneregsadata1.blob.core.windows.net/data/txt/publicextract.charity.zip",
+      "https://ccewuksprdoneregsadata1.blob.core.windows.net/data/txt/publicextract.charity_classification.zip",
+      "https://ccewuksprdoneregsadata1.blob.core.windows.net/data/txt/publicextract.charity_area_of_operation.zip",
+      "https://ccewuksprdoneregsadata1.blob.core.windows.net/data/txt/publicextract.charity_governing_document.zip"
+    ]
+  },
+  "task": {
+    "decision_user": "A Charity Commission registration and casework analyst deciding which newly registered charities to triage for early compliance support.",
+    "features": [
+      {
+        "availability": "Current extract field populated for main charities; later legal-form conversions can change it.",
+        "evidence_url": "https://prd-ds-register-of-charities.charitycommission.gov.uk/documents/17872866/17970272/Data+Definition.docx/f0a342ce-ef45-1401-ee75-26225f6f0d4f",
+        "meaning": "Legal or administrative type displayed on the register, such as charitable company, CIO, trust or unincorporated association.",
+        "name": "charity_type"
+      },
+      {
+        "availability": "Current extract binary flag; later legal-form conversion can change it.",
+        "evidence_url": "https://prd-ds-register-of-charities.charitycommission.gov.uk/documents/17872866/17970272/Data+Definition.docx/f0a342ce-ef45-1401-ee75-26225f6f0d4f",
+        "meaning": "Whether the charity is a Charitable Incorporated Organisation, normalised to a binary flag with empty meaning unknown.",
+        "name": "charity_is_cio"
+      },
+      {
+        "availability": "Derived from the current company registration number; a later incorporation can appear.",
+        "evidence_url": "https://prd-ds-register-of-charities.charitycommission.gov.uk/documents/17872866/17970272/Data+Definition.docx/f0a342ce-ef45-1401-ee75-26225f6f0d4f",
+        "meaning": "Whether the charity has a Companies House registration number in the current extract.",
+        "name": "has_company_registration"
+      },
+      {
+        "availability": "Current linked classification rows; no as-of-registration timestamp.",
+        "evidence_url": "https://prd-ds-register-of-charities.charitycommission.gov.uk/documents/17872866/17970272/Data+Definition.docx/f0a342ce-ef45-1401-ee75-26225f6f0d4f",
+        "meaning": "Sorted semicolon-separated register classification codes for the What category, aggregated per organisation. Missing means no linked What row, not a none category.",
+        "name": "classification_what"
+      },
+      {
+        "availability": "Current linked classification rows; no as-of-registration timestamp.",
+        "evidence_url": "https://prd-ds-register-of-charities.charitycommission.gov.uk/documents/17872866/17970272/Data+Definition.docx/f0a342ce-ef45-1401-ee75-26225f6f0d4f",
+        "meaning": "Sorted semicolon-separated register classification codes for the Who category, aggregated per organisation. Missing means no linked Who row, not a none category.",
+        "name": "classification_who"
+      },
+      {
+        "availability": "Current linked area rows; no documented hierarchy and no as-of-registration timestamp.",
+        "evidence_url": "https://prd-ds-register-of-charities.charitycommission.gov.uk/documents/17872866/17970272/Data+Definition.docx/f0a342ce-ef45-1401-ee75-26225f6f0d4f",
+        "meaning": "Sorted semicolon-separated distinct area-of-operation descriptions aggregated per organisation. This is a scope profile rather than a single ranked scope because the current extract does not evidence a documented geographic hierarchy. Missing is not zero.",
+        "name": "area_of_operation_scope"
+      },
+      {
+        "availability": "Current linked governing-document field; no as-of-registration timestamp.",
+        "evidence_url": "https://prd-ds-register-of-charities.charitycommission.gov.uk/documents/17872866/17970272/Data+Definition.docx/f0a342ce-ef45-1401-ee75-26225f6f0d4f",
+        "meaning": "Short description of the governing-document type from the linked governing-document table, whitespace-normalised.",
+        "name": "governing_document_description"
+      },
+      {
+        "availability": "Current linked charitable objects text; no as-of-registration timestamp.",
+        "evidence_url": "https://prd-ds-register-of-charities.charitycommission.gov.uk/documents/17872866/17970272/Data+Definition.docx/f0a342ce-ef45-1401-ee75-26225f6f0d4f",
+        "meaning": "Text of the charitable objects from the linked governing-document table, whitespace-normalised for a bag-of-words or hashed representation.",
+        "name": "objects_text"
+      }
+    ],
+    "outcome_horizon": "Five years (to the registration-date anniversary) after date_of_registration; the removal date is observed through the extract date, which is at least seven years later for every eligible cohort.",
+    "population": "Main charities only, where linked_charity_number equals 0, with date_of_registration from 2015-01-01 through 2018-12-31 inclusive, whose charity_registration_status normalises to registered or removed, excluding rows where date_of_removal precedes date_of_registration. One row per organisation_number; linked and subsidiary charities are excluded.",
+    "prediction_time": "date_of_registration, the day the charity is entered on the register. Only attributes present in the current daily extract are treated as registration-time descriptors; classification, area, governing-document and objects fields are not time-stamped, so their as-of-registration availability is assumed rather than verified.",
+    "question": "Will a charity newly entered on the Register of Charities for England and Wales be removed from the register within five years of its registration date?",
+    "simple_references": "Majority-class base rate per split; registration-year base rates as a calendar control; charity_type-only lookup table; no persistence baseline because each charity appears once and the outcome is a first exit event.",
+    "split_policy": "Chronological by date_of_registration: train = registrations from 2015-01-01 through 2016-12-31; eval = 2017-01-01 through 2017-12-31; holdout = 2018-01-01 through 2018-12-31. No embargo is applied because every input is fixed at the row's own registration date and the label is the row's own forward five-year exit; there are no lagged, rolling or cross-row features. All five-year outcome windows close by 2023-12-31, well before the extract date.",
+    "target": "y = 1 if date_of_removal is non-null and is on or before the fifth anniversary of date_of_registration; y = 0 if there is no removal on or before that anniversary, including charities still registered or removed later.",
+    "usefulness": "The label is a forward register-exit event that is never present in the input row, so the model must combine legal form, purpose classification, operating scope and objects text to beat the base rate. Removal includes mergers, asset transfers, dissolution and non-filing, so this is register-exit triage rather than an insolvency or causal effectiveness claim. No existing outcome field is used as a feature."
+  },
+  "rows": {
+    "train": 11279,
+    "eval": 5564,
+    "holdout": 4930
+  },
+  "evaluation_contract": {
+    "access": "isolated_rows",
+    "cross_row_audit": {
+      "auxiliary_files_review": "Only public/train.csv, public/eval.csv and private/holdout.csv are written; no auxiliary evaluation files.",
+      "probes": [],
+      "rationale": "Rows are independent main charities; no cross-row features, label-derived rates or holdout information are shipped."
+    },
+    "feature_evidence": {
+      "area_of_operation_scope": {
+        "availability": "Current linked area rows; no documented hierarchy and no as-of-registration timestamp.",
+        "source": "Charity Commission for England and Wales data definition and daily bulk extract",
+        "status": "assumed"
+      },
+      "charity_is_cio": {
+        "availability": "Current extract binary flag; later legal-form conversion can change it.",
+        "source": "Charity Commission for England and Wales data definition and daily bulk extract",
+        "status": "assumed"
+      },
+      "charity_type": {
+        "availability": "Current extract field populated for main charities; later legal-form conversions can change it.",
+        "source": "Charity Commission for England and Wales data definition and daily bulk extract",
+        "status": "assumed"
+      },
+      "classification_what": {
+        "availability": "Current linked classification rows; no as-of-registration timestamp.",
+        "source": "Charity Commission for England and Wales data definition and daily bulk extract",
+        "status": "assumed"
+      },
+      "classification_who": {
+        "availability": "Current linked classification rows; no as-of-registration timestamp.",
+        "source": "Charity Commission for England and Wales data definition and daily bulk extract",
+        "status": "assumed"
+      },
+      "date_of_registration": {
+        "availability": "Documented register entry date, shipped as the event-time and split anchor; the current snapshot value is assumed to equal the registration-time decision instant.",
+        "source": "Charity Commission for England and Wales data definition and daily bulk extract",
+        "status": "assumed"
+      },
+      "governing_document_description": {
+        "availability": "Current linked governing-document field; no as-of-registration timestamp.",
+        "source": "Charity Commission for England and Wales data definition and daily bulk extract",
+        "status": "assumed"
+      },
+      "has_company_registration": {
+        "availability": "Derived from the current company registration number; a later incorporation can appear.",
+        "source": "Charity Commission for England and Wales data definition and daily bulk extract",
+        "status": "assumed"
+      },
+      "objects_text": {
+        "availability": "Current linked charitable objects text; no as-of-registration timestamp.",
+        "source": "Charity Commission for England and Wales data definition and daily bulk extract",
+        "status": "assumed"
+      },
+      "organisation_number": {
+        "availability": "Stable extract identifier shipped as the row key; current snapshot, not an outcome field.",
+        "source": "Charity Commission for England and Wales daily bulk extract, charity table",
+        "status": "assumed"
+      }
+    },
+    "limitations": [
+      "Removal is a register-exit event, not insolvency, failure or organisational death; it includes mergers, asset transfers, dissolution and removal for non-filing.",
+      "The bulk extract is a current-vintage snapshot; classification, area, governing-document and objects fields carry no as-of-registration timestamp, so they are assumed registration-time descriptors and may reflect later edits.",
+      "Charities removed after the fifth anniversary are coded negative, so late exits are right-censored by design.",
+      "England and Wales only; Scotland and Northern Ireland are separate regulators.",
+      "Personal data in the register is excluded; only organisation-level attributes are shipped.",
+      "Legal-form conversions after registration can create a vintage mismatch.",
+      "date_of_removal is not the date the charity ceased to exist or ceased to operate.",
+      "The shipped date_of_registration is the prediction-time anchor and part of the cohort definition, not an answer source; the answer sources (date_of_removal and charity_registration_status) are never shipped.",
+      "Actual column names and status spellings were not re-read during this write-only construction; the builder resolves documented and plausible aliases and raises with observed headers and archive member if a field or join is unresolved.",
+      "No persistence reference is available because each organisation appears once in the cohort."
+    ],
+    "selection": {
+      "evidence": "Frozen task definition: eligibility uses date_of_registration, linked_charity_number, charity_registration_status and date_of_removal only to define the cohort and label, not as features.",
+      "kind": "prediction_time"
+    },
+    "training_label_timing": "unverified",
+    "use": "retrospective_research",
+    "vintage": {
+      "evidence": "Charity Commission daily bulk extract; current snapshot fields are not time-stamped as of registration.",
+      "kind": "current_snapshot"
+    }
+  },
+  "limitations": [
+    "Removal is not the same as failure: it includes mergers, asset transfers, dissolution and removal for non-filing, so the label is a register-exit event rather than an insolvency or effectiveness measure.",
+    "The bulk extract is a current-vintage snapshot: classification, area, activities and governing-document fields carry no as-of-registration timestamp, so they are treated as registration-time descriptors but may reflect later edits; this does not establish historical operational availability.",
+    "Charities removed after the five-year anniversary are coded negative, so late exits are right-censored by design.",
+    "The register covers England and Wales only; Scotland (OSCR) and Northern Ireland (CCNI) are separate regulators and are excluded.",
+    "The register includes personal data (trustee names, contact details) that the OGL does not cover; the derived release must exclude those fields and use organisation-level attributes only.",
+    "Legal-form conversions after registration (for example to a CIO) can change the current charity_type, creating a small vintage mismatch with the decision instant.",
+    "The removal date is not the date the charity ceased to exist or ceased to operate, so the label should not be read as an organisational death date.",
+    "Removal is a register-exit event, not insolvency, failure or organisational death; it includes mergers, asset transfers, dissolution and removal for non-filing.",
+    "The bulk extract is a current-vintage snapshot; classification, area, governing-document and objects fields carry no as-of-registration timestamp, so they are assumed registration-time descriptors and may reflect later edits.",
+    "Charities removed after the fifth anniversary are coded negative, so late exits are right-censored by design.",
+    "England and Wales only; Scotland and Northern Ireland are separate regulators.",
+    "Personal data in the register is excluded; only organisation-level attributes are shipped.",
+    "Legal-form conversions after registration can create a vintage mismatch.",
+    "date_of_removal is not the date the charity ceased to exist or ceased to operate.",
+    "The shipped date_of_registration is the prediction-time anchor and part of the cohort definition, not an answer source; the answer sources (date_of_removal and charity_registration_status) are never shipped.",
+    "Actual column names and status spellings were not re-read during this write-only construction; the builder resolves documented and plausible aliases and raises with observed headers and archive member if a field or join is unresolved.",
+    "No persistence reference is available because each organisation appears once in the cohort.",
+    "No uncertainty interval; observed differences do not establish universal headroom"
+  ],
+  "qualification": {
+    "gate_version": "1.6.1",
+    "ok": true
+  }
+}

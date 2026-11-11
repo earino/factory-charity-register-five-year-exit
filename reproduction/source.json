@@ -1,0 +1,125 @@
+{
+  "construction": {
+    "access_recipe": "Download publicextract.charity.zip, publicextract.charity_classification.zip, publicextract.charity_area_of_operation.zip and publicextract.charity_governing_document.zip from the ccewuksprdoneregsadata1.blob.core.windows.net host; unzip each. Read the TSV files with pandas.read_csv(sep='\\t', dtype=str, quoting=csv.QUOTE_NONE, encoding='utf-8', on_bad_lines='warn'). Parse date_of_registration and date_of_removal with pandas.to_datetime(errors='coerce'). Keep linked_charity_number == 0 from the charity table, join classification/area/governing-document tables on organisation_number, and aggregate multi-row tables to one row per organisation_number. Validate that charity_registration_status takes the documented registered/removed values (the API uses R/RM; the bulk extract may spell them out) and that date_of_removal is non-null exactly for removed rows.",
+    "expected_size": "The charity table is estimated at roughly 250,000-300,000 rows (171,903 charities were on the register in late 2025-2026 plus an unstated number of removed charities); the eligible 2015-2018 cohort is estimated at 18,000-22,000 main charities at roughly 4,500-5,500 registrations per year. ZIP archives are on the order of tens of megabytes each.",
+    "format": "ZIP archives containing UTF-8 tab-delimited text tables (with equivalent JSON archives); one archive per table.",
+    "source_examples": "The data definition documents date_of_removal as NULL for non-removed charities and says charity_type is populated only for main parent charities (linked_charity_number = 0). The Commission's quarterly casework release reports 1,101 and 1,301 charities registered in the July-September 2025 quarter, implying roughly 4,400-5,200 registrations per year at current volumes."
+  },
+  "dataset_id": "charity-register-five-year-exit",
+  "evidence": [
+    {
+      "claim": "The publisher provides a daily bulk download of the register in JSON and tab-delimited form, with direct links to per-table ZIP files.",
+      "quote": "The Charity Commission for England and Wales provides a daily extract of publicly available data in both JSON and tab delimited formats for download.",
+      "url": "https://register-of-charities.charitycommission.gov.uk/en/register/full-register-download"
+    },
+    {
+      "claim": "The extract covers both currently registered and removed charities, which is what makes a forward exit label observable.",
+      "quote": "This extract contains all registered, removed and linked charities.",
+      "url": "https://prd-ds-register-of-charities.charitycommission.gov.uk/documents/17872866/17970272/Data+Definition.docx/f0a342ce-ef45-1401-ee75-26225f6f0d4f"
+    },
+    {
+      "claim": "date_of_removal is documented as the register-removal date and is null for charities that have not been removed.",
+      "quote": "For non-removed charities the field is NULL.",
+      "url": "https://prd-ds-register-of-charities.charitycommission.gov.uk/documents/17872866/17970272/Data+Definition.docx/f0a342ce-ef45-1401-ee75-26225f6f0d4f"
+    },
+    {
+      "claim": "The OGL grants reuse, adaptation, commercial exploitation and redistribution subject to attribution conditions.",
+      "quote": "The Licensor grants you a worldwide, royalty-free, perpetual, non-exclusive licence to use the Information subject to the conditions below.",
+      "url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+    },
+    {
+      "claim": "The Register of Charities site carries the standard OGL v3.0 statement for its content, including the download service.",
+      "quote": "All content is available under the Open Government Licence v3.0",
+      "url": "https://register-of-charities.charitycommission.gov.uk/en/register/full-register-download"
+    }
+  ],
+  "limitations": [
+    "Removal is not the same as failure: it includes mergers, asset transfers, dissolution and removal for non-filing, so the label is a register-exit event rather than an insolvency or effectiveness measure.",
+    "The bulk extract is a current-vintage snapshot: classification, area, activities and governing-document fields carry no as-of-registration timestamp, so they are treated as registration-time descriptors but may reflect later edits; this does not establish historical operational availability.",
+    "Charities removed after the five-year anniversary are coded negative, so late exits are right-censored by design.",
+    "The register covers England and Wales only; Scotland (OSCR) and Northern Ireland (CCNI) are separate regulators and are excluded.",
+    "The register includes personal data (trustee names, contact details) that the OGL does not cover; the derived release must exclude those fields and use organisation-level attributes only.",
+    "Legal-form conversions after registration (for example to a CIO) can change the current charity_type, creating a small vintage mismatch with the decision instant.",
+    "The removal date is not the date the charity ceased to exist or ceased to operate, so the label should not be read as an organisational death date."
+  ],
+  "reason": "The Charity Commission for England and Wales publishes a daily, no-account bulk extract of the Register of Charities that explicitly includes removed charities and a documented removal date, alongside day-one attributes such as charity type, CIO status, classifications, area of operation and governing-document description. The site is published under the Open Government Licence v3.0, which permits redistribution with attribution, and annual registrations (~4,400-5,200) are sufficient for chronological five-year cohorts.",
+  "source": {
+    "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+    "citation": "",
+    "documentation_url": "https://prd-ds-register-of-charities.charitycommission.gov.uk/documents/17872866/17970272/Data+Definition.docx/f0a342ce-ef45-1401-ee75-26225f6f0d4f",
+    "license": "Open Government Licence v3.0 (OGL-UK-3.0)",
+    "publisher": "Charity Commission for England and Wales",
+    "redistribution": true,
+    "terms_excerpt": "The Licensor grants you a worldwide, royalty-free, perpetual, non-exclusive licence to use the Information subject to the conditions below.",
+    "terms_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "urls": [
+      "https://ccewuksprdoneregsadata1.blob.core.windows.net/data/txt/publicextract.charity.zip",
+      "https://ccewuksprdoneregsadata1.blob.core.windows.net/data/txt/publicextract.charity_classification.zip",
+      "https://ccewuksprdoneregsadata1.blob.core.windows.net/data/txt/publicextract.charity_area_of_operation.zip",
+      "https://ccewuksprdoneregsadata1.blob.core.windows.net/data/txt/publicextract.charity_governing_document.zip"
+    ]
+  },
+  "task": {
+    "decision_user": "A Charity Commission registration and casework analyst deciding which newly registered charities to triage for early compliance support.",
+    "features": [
+      {
+        "availability": "Current extract field populated for main charities; later legal-form conversions can change it.",
+        "evidence_url": "https://prd-ds-register-of-charities.charitycommission.gov.uk/documents/17872866/17970272/Data+Definition.docx/f0a342ce-ef45-1401-ee75-26225f6f0d4f",
+        "meaning": "Legal or administrative type displayed on the register, such as charitable company, CIO, trust or unincorporated association.",
+        "name": "charity_type"
+      },
+      {
+        "availability": "Current extract binary flag; later legal-form conversion can change it.",
+        "evidence_url": "https://prd-ds-register-of-charities.charitycommission.gov.uk/documents/17872866/17970272/Data+Definition.docx/f0a342ce-ef45-1401-ee75-26225f6f0d4f",
+        "meaning": "Whether the charity is a Charitable Incorporated Organisation, normalised to a binary flag with empty meaning unknown.",
+        "name": "charity_is_cio"
+      },
+      {
+        "availability": "Derived from the current company registration number; a later incorporation can appear.",
+        "evidence_url": "https://prd-ds-register-of-charities.charitycommission.gov.uk/documents/17872866/17970272/Data+Definition.docx/f0a342ce-ef45-1401-ee75-26225f6f0d4f",
+        "meaning": "Whether the charity has a Companies House registration number in the current extract.",
+        "name": "has_company_registration"
+      },
+      {
+        "availability": "Current linked classification rows; no as-of-registration timestamp.",
+        "evidence_url": "https://prd-ds-register-of-charities.charitycommission.gov.uk/documents/17872866/17970272/Data+Definition.docx/f0a342ce-ef45-1401-ee75-26225f6f0d4f",
+        "meaning": "Sorted semicolon-separated register classification codes for the What category, aggregated per organisation. Missing means no linked What row, not a none category.",
+        "name": "classification_what"
+      },
+      {
+        "availability": "Current linked classification rows; no as-of-registration timestamp.",
+        "evidence_url": "https://prd-ds-register-of-charities.charitycommission.gov.uk/documents/17872866/17970272/Data+Definition.docx/f0a342ce-ef45-1401-ee75-26225f6f0d4f",
+        "meaning": "Sorted semicolon-separated register classification codes for the Who category, aggregated per organisation. Missing means no linked Who row, not a none category.",
+        "name": "classification_who"
+      },
+      {
+        "availability": "Current linked area rows; no documented hierarchy and no as-of-registration timestamp.",
+        "evidence_url": "https://prd-ds-register-of-charities.charitycommission.gov.uk/documents/17872866/17970272/Data+Definition.docx/f0a342ce-ef45-1401-ee75-26225f6f0d4f",
+        "meaning": "Sorted semicolon-separated distinct area-of-operation descriptions aggregated per organisation. This is a scope profile rather than a single ranked scope because the current extract does not evidence a documented geographic hierarchy. Missing is not zero.",
+        "name": "area_of_operation_scope"
+      },
+      {
+        "availability": "Current linked governing-document field; no as-of-registration timestamp.",
+        "evidence_url": "https://prd-ds-register-of-charities.charitycommission.gov.uk/documents/17872866/17970272/Data+Definition.docx/f0a342ce-ef45-1401-ee75-26225f6f0d4f",
+        "meaning": "Short description of the governing-document type from the linked governing-document table, whitespace-normalised.",
+        "name": "governing_document_description"
+      },
+      {
+        "availability": "Current linked charitable objects text; no as-of-registration timestamp.",
+        "evidence_url": "https://prd-ds-register-of-charities.charitycommission.gov.uk/documents/17872866/17970272/Data+Definition.docx/f0a342ce-ef45-1401-ee75-26225f6f0d4f",
+        "meaning": "Text of the charitable objects from the linked governing-document table, whitespace-normalised for a bag-of-words or hashed representation.",
+        "name": "objects_text"
+      }
+    ],
+    "outcome_horizon": "Five years (to the registration-date anniversary) after date_of_registration; the removal date is observed through the extract date, which is at least seven years later for every eligible cohort.",
+    "population": "Main charities only, where linked_charity_number equals 0, with date_of_registration from 2015-01-01 through 2018-12-31 inclusive, whose charity_registration_status normalises to registered or removed, excluding rows where date_of_removal precedes date_of_registration. One row per organisation_number; linked and subsidiary charities are excluded.",
+    "prediction_time": "date_of_registration, the day the charity is entered on the register. Only attributes present in the current daily extract are treated as registration-time descriptors; classification, area, governing-document and objects fields are not time-stamped, so their as-of-registration availability is assumed rather than verified.",
+    "question": "Will a charity newly entered on the Register of Charities for England and Wales be removed from the register within five years of its registration date?",
+    "simple_references": "Majority-class base rate per split; registration-year base rates as a calendar control; charity_type-only lookup table; no persistence baseline because each charity appears once and the outcome is a first exit event.",
+    "split_policy": "Chronological by date_of_registration: train = registrations from 2015-01-01 through 2016-12-31; eval = 2017-01-01 through 2017-12-31; holdout = 2018-01-01 through 2018-12-31. No embargo is applied because every input is fixed at the row's own registration date and the label is the row's own forward five-year exit; there are no lagged, rolling or cross-row features. All five-year outcome windows close by 2023-12-31, well before the extract date.",
+    "target": "y = 1 if date_of_removal is non-null and is on or before the fifth anniversary of date_of_registration; y = 0 if there is no removal on or before that anniversary, including charities still registered or removed later.",
+    "usefulness": "The label is a forward register-exit event that is never present in the input row, so the model must combine legal form, purpose classification, operating scope and objects text to beat the base rate. Removal includes mergers, asset transfers, dissolution and non-filing, so this is register-exit triage rather than an insolvency or causal effectiveness claim. No existing outcome field is used as a feature."
+  },
+  "title": "Will a newly registered charity leave the Charity Commission register within five years?",
+  "verdict": "ready"
+}

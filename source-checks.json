@@ -1,0 +1,240 @@
+{
+  "checks": [
+    {
+      "check": "fetched charity archive",
+      "observed": "44289342 bytes",
+      "expected": "nonempty local archive",
+      "passed": true
+    },
+    {
+      "check": "fetched classification archive",
+      "observed": "7688301 bytes",
+      "expected": "nonempty local archive",
+      "passed": true
+    },
+    {
+      "check": "fetched area_of_operation archive",
+      "observed": "4421913 bytes",
+      "expected": "nonempty local archive",
+      "passed": true
+    },
+    {
+      "check": "fetched governing_document archive",
+      "observed": "38040267 bytes",
+      "expected": "nonempty local archive",
+      "passed": true
+    },
+    {
+      "check": "selected charity archive member",
+      "observed": "publicextract.charity.txt",
+      "expected": "largest tab-delimited member of publicextract.charity.zip",
+      "passed": true
+    },
+    {
+      "check": "selected classification archive member",
+      "observed": "publicextract.charity_classification.txt",
+      "expected": "largest tab-delimited member of publicextract.charity_classification.zip",
+      "passed": true
+    },
+    {
+      "check": "selected area archive member",
+      "observed": "publicextract.charity_area_of_operation.txt",
+      "expected": "largest tab-delimited member of publicextract.charity_area_of_operation.zip",
+      "passed": true
+    },
+    {
+      "check": "selected governing-document archive member",
+      "observed": "publicextract.charity_governing_document.txt",
+      "expected": "largest tab-delimited member of publicextract.charity_governing_document.zip",
+      "passed": true
+    },
+    {
+      "check": "main-charity status codes outside the frozen cohort",
+      "observed": "none",
+      "expected": "recorded without being used as labels",
+      "passed": true
+    },
+    {
+      "check": "date_of_removal populated exactly for removed main charities",
+      "observed": "removed_missing=0; registered_with_date=0",
+      "expected": "both counts zero, per the publisher data definition",
+      "passed": true
+    },
+    {
+      "check": "pre-registration removal rows",
+      "observed": "0 rows excluded",
+      "expected": "rows with date_of_removal before date_of_registration are excluded and counted",
+      "passed": true
+    },
+    {
+      "check": "duplicate organisation_number in cohort",
+      "observed": "0 duplicates",
+      "expected": "0 duplicates",
+      "passed": true
+    },
+    {
+      "check": "label rule dates",
+      "observed": "removal_date <= date_of_registration + 5 calendar years; positives=1407",
+      "expected": "frozen five-year anniversary rule",
+      "passed": true,
+      "kind": "unit"
+    },
+    {
+      "check": "five-year horizon calendar-year unit",
+      "observed": "100 sampled rows have anniversary year equal to registration year plus five",
+      "expected": "calendar-year frame, not fixed 365-day arithmetic",
+      "passed": true,
+      "kind": "unit"
+    },
+    {
+      "check": "nonempty values for charity_type",
+      "observed": "21771 of 21773 cohort rows",
+      "expected": "at least one nonempty parsed value",
+      "passed": true
+    },
+    {
+      "check": "nonempty values for charity_is_cio",
+      "observed": "21773 of 21773 cohort rows",
+      "expected": "at least one nonempty parsed value",
+      "passed": true
+    },
+    {
+      "check": "nonempty values for has_company_registration",
+      "observed": "21773 of 21773 cohort rows",
+      "expected": "at least one nonempty parsed value",
+      "passed": true
+    },
+    {
+      "check": "nonempty values for classification_what",
+      "observed": "21772 of 21773 cohort rows",
+      "expected": "at least one nonempty parsed value",
+      "passed": true
+    },
+    {
+      "check": "nonempty values for classification_who",
+      "observed": "21488 of 21773 cohort rows",
+      "expected": "at least one nonempty parsed value",
+      "passed": true
+    },
+    {
+      "check": "nonempty values for area_of_operation_scope",
+      "observed": "21772 of 21773 cohort rows",
+      "expected": "at least one nonempty parsed value",
+      "passed": true
+    },
+    {
+      "check": "nonempty values for governing_document_description",
+      "observed": "21773 of 21773 cohort rows",
+      "expected": "at least one nonempty parsed value",
+      "passed": true
+    },
+    {
+      "check": "nonempty values for objects_text",
+      "observed": "21773 of 21773 cohort rows",
+      "expected": "at least one nonempty parsed value",
+      "passed": true
+    },
+    {
+      "check": "join coverage for classification_what",
+      "observed": "21772 of 21773 cohort rows matched",
+      "expected": "at least one matched organisation_number",
+      "passed": true
+    },
+    {
+      "check": "join coverage for classification_who",
+      "observed": "21488 of 21773 cohort rows matched",
+      "expected": "at least one matched organisation_number",
+      "passed": true
+    },
+    {
+      "check": "join coverage for area_of_operation_scope",
+      "observed": "21772 of 21773 cohort rows matched",
+      "expected": "at least one matched organisation_number",
+      "passed": true
+    },
+    {
+      "check": "join coverage for governing_document_description",
+      "observed": "21773 of 21773 cohort rows matched",
+      "expected": "at least one matched organisation_number",
+      "passed": true
+    },
+    {
+      "check": "join coverage for objects_text",
+      "observed": "21773 of 21773 cohort rows matched",
+      "expected": "at least one matched organisation_number",
+      "passed": true
+    },
+    {
+      "check": "train registration-date window",
+      "observed": "2015-01-02..2016-12-30",
+      "expected": "half-open [2015-01-01, 2017-01-01)",
+      "passed": true
+    },
+    {
+      "check": "train positive labels",
+      "observed": "779 positives in 11279 rows",
+      "expected": "at least one positive and no more positives than rows",
+      "passed": true
+    },
+    {
+      "check": "eval registration-date window",
+      "observed": "2017-01-02..2017-12-29",
+      "expected": "half-open [2017-01-01, 2018-01-01)",
+      "passed": true
+    },
+    {
+      "check": "eval positive labels",
+      "observed": "365 positives in 5564 rows",
+      "expected": "at least one positive and no more positives than rows",
+      "passed": true
+    },
+    {
+      "check": "holdout registration-date window",
+      "observed": "2018-01-02..2018-12-31",
+      "expected": "half-open [2018-01-01, 2019-01-01)",
+      "passed": true
+    },
+    {
+      "check": "holdout positive labels",
+      "observed": "263 positives in 4930 rows",
+      "expected": "at least one positive and no more positives than rows",
+      "passed": true
+    },
+    {
+      "check": "train output headers",
+      "observed": "['organisation_number', 'date_of_registration', 'charity_type', 'charity_is_cio', 'has_company_registration', 'classification_what', 'classification_who', 'area_of_operation_scope', 'governing_document_description', 'objects_text', 'exit_within_5y']",
+      "expected": "['organisation_number', 'date_of_registration', 'charity_type', 'charity_is_cio', 'has_company_registration', 'classification_what', 'classification_who', 'area_of_operation_scope', 'governing_document_description', 'objects_text', 'exit_within_5y']",
+      "passed": true
+    },
+    {
+      "check": "train target header",
+      "observed": "exit_within_5y",
+      "expected": "exit_within_5y",
+      "passed": true
+    },
+    {
+      "check": "eval output headers",
+      "observed": "['organisation_number', 'date_of_registration', 'charity_type', 'charity_is_cio', 'has_company_registration', 'classification_what', 'classification_who', 'area_of_operation_scope', 'governing_document_description', 'objects_text', 'exit_within_5y']",
+      "expected": "['organisation_number', 'date_of_registration', 'charity_type', 'charity_is_cio', 'has_company_registration', 'classification_what', 'classification_who', 'area_of_operation_scope', 'governing_document_description', 'objects_text', 'exit_within_5y']",
+      "passed": true
+    },
+    {
+      "check": "eval target header",
+      "observed": "exit_within_5y",
+      "expected": "exit_within_5y",
+      "passed": true
+    },
+    {
+      "check": "holdout output headers",
+      "observed": "['organisation_number', 'date_of_registration', 'charity_type', 'charity_is_cio', 'has_company_registration', 'classification_what', 'classification_who', 'area_of_operation_scope', 'governing_document_description', 'objects_text', 'exit_within_5y']",
+      "expected": "['organisation_number', 'date_of_registration', 'charity_type', 'charity_is_cio', 'has_company_registration', 'classification_what', 'classification_who', 'area_of_operation_scope', 'governing_document_description', 'objects_text', 'exit_within_5y']",
+      "passed": true
+    },
+    {
+      "check": "holdout target header",
+      "observed": "exit_within_5y",
+      "expected": "exit_within_5y",
+      "passed": true
+    }
+  ]
+}

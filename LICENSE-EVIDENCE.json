@@ -1,0 +1,11 @@
+{
+  "ok": true,
+  "terms_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+  "terms_sha256": "f5b2b9f2af63647cde889fa6c3508f5705925295b74912c68caa28dd37e64aa5",
+  "documentation_url": "https://prd-ds-register-of-charities.charitycommission.gov.uk/documents/17872866/17970272/Data+Definition.docx/f0a342ce-ef45-1401-ee75-26225f6f0d4f",
+  "documentation_sha256": "57ba8e26ea4189b8b82a3ace5976f59035008c61d46a90415bf84e88b67345e8",
+  "quoted_excerpt": "The Licensor grants you a worldwide, royalty-free, perpetual, non-exclusive licence to use the Information subject to the conditions below.",
+  "excerpt_found": true,
+  "excerpt_match": "contiguous",
+  "scope": "Captured publisher bytes and quote presence; semantic applicability reviewed separately"
+}
