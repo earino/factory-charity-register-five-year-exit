@@ -15,6 +15,14 @@ configs:
     path: extract/private/holdout.csv
 ---
 
+<!-- dataset-factory:links -->
+**Dataset Factory · v-6e90da65ff14dfeb**
+
+[Dataset website](https://earino.github.io/factory-charity-register-five-year-exit/versions/v-6e90da65ff14dfeb/) · [GitHub release](https://github.com/earino/factory-charity-register-five-year-exit/releases/tag/v-6e90da65ff14dfeb) · [Hugging Face](https://huggingface.co/datasets/earino/factory-charity-register-five-year-exit/tree/v-6e90da65ff14dfeb) · [Catalogue](https://earino.github.io/dataset-factory-site/)
+
+Artifact: b059d2169e6f3207400d1b7a9ae3c6c27a32fa765ef5f341f529708c25b01ea2
+<!-- /dataset-factory:links -->
+
 # Will a newly registered charity leave the Charity Commission register within five years?
 
 Will a charity newly entered on the Register of Charities for England and Wales be removed from the register within five years of its registration date?
